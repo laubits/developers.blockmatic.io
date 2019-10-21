@@ -1,0 +1,34 @@
+---
+title: "Cloud Infrastructure"
+metaTitle: "Cloud Infrastructure"
+metaDescription: "Cloud Infrastructure"
+---
+
+Emanate's Cloud Infrastructure is entirely managed as code following devops best practices for continuous integration, delivery and deployment. We leverage tools such Terraform (with Terragrunt), Docker and Ansible to provision it. The majority of Emanate's infrastructure sits on AWS at the moment.
+
+<small>for position only</small>
+![Infrastructure](assets/demo_web_app_architecture.png)
+
+## Design Process
+
+We leverage cloudcraft.io to design an commucate ideas and also to boostrap them using
+
+## Environments
+
+Currently we have 3 environments running on separate VPCs under the same AWS account.
+
+### Production
+
+![Infrastructure](assets/infrastructure.png)
+
+- https://146940496492.signin.aws.amazon.com/console
+
+## For discussion:
+
+- Separate production into a different account.
+- Automate security and compliance.
+- Use containers for services and automated deployments.
+- Ephemeral environments for testing.
+- Use Now.sh and Netlify for frontend applications.
+- Leverage more AWS services.
+- Use cloudcraft.co and Terragrunt for communication and visualizaiton and terraform.

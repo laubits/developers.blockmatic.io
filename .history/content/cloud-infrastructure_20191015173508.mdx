@@ -1,0 +1,74 @@
+---
+title: "Cloud Infrastructure"
+metaTitle: "Cloud Infrastructure"
+metaDescription: "Cloud Infrastructure"
+---
+
+Emanate's Cloud Infrastructure is entirely managed as code following devops best practices for continuous integration, delivery and deployment. We leverage tools such Terraform (with Terragrunt), Docker and Ansible to provision it. The majority of Emanate's infrastructure sits on AWS at the moment.
+
+![Infrastructure](assets/demo_web_app_architecture.png)
+<center><small>image for position only</small></center>
+
+## Process
+
+We leverage [cloudcraft.io](https://cloudcraft.co) to design an commucate ideas as well as bootstraping them using for implementation utilizing the the cloudcraft export feature that allows to automatically generate the Terraform boilerplates required for deploying the infrastructure desings. This allow us to communicate more effectively and implement changes faster.
+
+<center>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/F1Ax1zfZbiY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+[Terragrunt](https://github.com/gruntwork-io/terragrunt) is a thin wrapper for [Terraform](https://www.terraform.io/) that provides extra tools for keeping your
+Terraform configurations DRY, working with multiple Terraform modules, and managing remote state. Check out
+[Terragrunt: how to keep your Terraform code DRY and
+maintainable](https://blog.gruntwork.io/terragrunt-how-to-keep-your-terraform-code-dry-and-maintainable-f61ae06959d8)
+for a quick introduction to Terragrunt.
+
+## Budget Management
+
+Resource effeciency is requirement for any business, it is everyone's responsibility to ensure that only that cloud resources are being used and managed with prudence, always make sure you tear down all resources you spin up for development and testing porposed. Budget alarms have been set to prevent unnexpected bills.
+
+## AWS Accounts
+
+We have an AWS organization with multiple accounts.
+
+- `master account` owns the organization and have access to consolidated billing.
+- `playground account` is dedicated to experimentation and everyone has admin rights here.
+- `development account` holds the `dev` and `stg` VPCs, and other feature environments.
+- `production account` highly secured, holds a zero trust `prod` VPC.
+- `monitoring account` is used event log aggregation. Engineering have restricted access for debugging.
+
+**AWS Console Login Routes**
+
+- [Emanate Playground](#)
+- [Emanate Development](#)
+- [Emanate Monitoring](#)
+
+## Security and Monitoring
+
+TODO: complete/enhance this section
+
+- Enable 2FA on all services.
+- We recommend using a [1password](https://1password.com/) to manage your passwords.
+- We use [Evident.io](https://evident.io/) as our monitoring service.
+
+## Environments
+
+Currently we have 3 environments running on separate VPCs under the same AWS account.
+
+### Production
+
+![Infrastructure](assets/infrastructure.png)
+
+- https://146940496492.signin.aws.amazon.com/console
+
+## For discussion:
+
+- Separate production into a different account.
+- Automate security and compliance.
+- Use containers for services and automated deployments.
+- Ephemeral environments for testing.
+- Use Now.sh and Netlify for frontend applications.
+- Leverage more AWS services.
+- Use cloudcraft.co and Terragrunt for communication and visualizaiton and terraform.
+- Budgetting alarms.
+- Use [Evident.io](https://evident.io/) as our monitoring service.

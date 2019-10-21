@@ -1,0 +1,25 @@
+---
+title: "Accounts and Environments"
+metaTitle: "Accounts and Environments"
+metaDescription: "Accounts and Environments"
+---
+
+## AWS Accounts
+
+We have an AWS organization with multiple accounts.
+
+- `master account` owns the organization and have access to consolidated billing.
+- `playground account` is dedicated to experimentation and everyone has admin rights here.
+- `development account` holds the `dev` and `stg` VPCs, and other feature environments.
+- `production account` highly secured, holds a zero trust `prod` VPC.
+- `monitoring account` is used event log aggregation. Engineering have restricted access for debugging.
+
+**AWS Console Login Routes**
+
+- [Emanate Playground](#)
+- [Emanate Development](#)
+- [Emanate Monitoring](#)
+
+## Environment Urls
+
+Each environment within Emanate infrastructure get its own subdomain.
