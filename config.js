@@ -22,9 +22,10 @@ const config = {
 	},
 	"sidebar": {
 		"forcedNavOrder": [
-      // '/general-philosophy',
-      // '/contributing-guidelines',
-      // '/code-style'
+      '/general-philosophy',
+      '/contributing-guidelines',
+      '/code-style',
+      '/code-style'
     ],
 		"links": [
       { "text": "Website", "link": "https://blockmatic.io"},
