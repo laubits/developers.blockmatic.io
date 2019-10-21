@@ -19,7 +19,7 @@
 
 This website provides a baseline knowledge for blockchain programmers. It is maintained by Blockmatic, with contributions from our friends in the broader blockchain community.
 
-## 🔥 Features
+## Features
 
 - Write using Markdown / [MDX](https://github.com/mdx-js/mdx)
 - GitBook style theme.
