@@ -24,11 +24,14 @@ const config = {
 		"forcedNavOrder": [
       '/general-philosophy',
       '/contributing-guidelines',
-      '/code-style',
+      '/code-conventions',
+      '/telos-dreamstack',
+      '/smart-contracts',
     ],
 		"links": [
       { "text": "Website", "link": "https://blockmatic.io"},
       { "text": "Github Organization", "link": "https://github.com/Blockmatic"},
+      { "text": "Learning Resources", "link": "https://learn.blockmatic.io"},
 		],
 		"frontline": false,
 		"ignoreIndex": true,
