@@ -1,0 +1,36 @@
+---
+title: "Infrastructure"
+metaTitle: "Blockmatic Infrastructure"
+metaDescription: "Blockmatic Infrastructure"
+---
+
+Infrastructure as code (IaC) is the approach to defining computing and network infrastructure through source code that can then be treated just like any software system. Such code can be kept in source control to allow auditability and reproducible builds, subject to testing practices, and the full discipline of continuous delivery.
+
+Cloud Infrastructure is entirely managed as code following devops best practices for continuous integration, delivery and deployment. We leverage tools such Terraform (with Terragrunt), Docker and Ansible to provision it.
+
+<center>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/F1Ax1zfZbiY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+[Terragrunt](https://github.com/gruntwork-io/terragrunt) is a thin wrapper for [Terraform](https://www.terraform.io/) that provides extra tools for keeping your
+Terraform configurations DRY, working with multiple Terraform modules, and managing remote state. Check out
+[Terragrunt: how to keep your Terraform code DRY and
+maintainable](https://blog.gruntwork.io/terragrunt-how-to-keep-your-terraform-code-dry-and-maintainable-f61ae06959d8)
+for a quick introduction to Terragrunt.
+
+## Containers
+
+The primary benefits of containers are efficiency and agility. Containers are orders of magnitude faster to provision, and much lighter-weight to build and define versus methods like omnibus software builds and full Virtual Machine images. Containers in a single OS are also more efficient at resource utilization than running a Hypervisor and guest OSS.
+
+Efficiency and agility are good for everyone, but they become game-changers at scale.
+
+Containers offer a logical packaging mechanism in which applications can be abstracted from the environment in which they actually run. This decoupling allows container-based applications to be deployed easily and consistently, regardless of whether the target environment is a private data center, the public cloud, or even a developer’s personal laptop. Containerization provides a clean separation of concerns, as developers focus on their application logic and dependencies, while IT operations teams can focus on deployment and management without bothering with application details such as specific software versions and configurations specific to the app.
+
+For those coming from virtualized environments, containers are often compared with virtual machines (VMs). You might already be familiar with VMs: a guest operating system such as Linux or Windows runs on top of a host operating system with virtualized access to the underlying hardware. Like virtual machines, containers allow you to package your application together with libraries and other dependencies, providing isolated environments for running your software services. As you’ll see below however, the similarities end here as containers offer a far more lightweight unit for developers and IT Ops teams to work with, carrying a myriad of benefits.
+
+## Continuous Deployment and Monitoring
+
+The one thing that all continuous deployment methods do have in common is the need for a strong monitoring solution. Developers are always under tight deadlines. In an ever-evolving environment, agility is essential to keeping pace.  Software teams all over the world are expected to move faster, test earlier, and release more frequently, all while improving quality and reducing costs.  The business wants their new functionality and their bug fixes right now. However, for teams taking an agile approach or hoping to adopt a DevOps culture in their organization, it’s vital to recognize that proactively monitoring of production is an essential element in achieving these goals.
+In future phases of development continuous security and availability monitoring processes will be configured to ensure system health, automatically detect and take actions on intrusion attempts detection or availability problems. Infrastructure as Code allows to program detection of misconfigurations of unexpected behavior and take actions to return do desired state.
+
+

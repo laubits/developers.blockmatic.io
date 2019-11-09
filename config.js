@@ -25,7 +25,6 @@ const config = {
       '/general-philosophy',
       '/contributing-guidelines',
       '/code-style',
-      '/code-style'
     ],
 		"links": [
       { "text": "Website", "link": "https://blockmatic.io"},
